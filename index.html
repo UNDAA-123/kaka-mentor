@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terima Kasih, Kak Mentor ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.card{
+    background:#fff;
+    width:100%;
+    max-width:650px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#ff4d6d;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#typing{
+    white-space:pre-wrap;
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+}
+
+.cursor{
+    display:inline-block;
+    width:3px;
+    background:#ff4d6d;
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💖 Terima Kasih, Kak Mentor 💖</h1>
+
+    <p id="typing"></p><span class="cursor"></span>
+</div>
+
+<script>
+const text = `Halo Kak,
+
+
+Terima kasih banyak ya, Kak, sudah menjadi mentor selama 5 hari ini. Walaupun waktunya tidak lama, aku benar-benar senang bisa belajar dan mendapat banyak pengalaman dari Kakak. Terima kasih juga karena sudah sabar membimbing, memberikan arahan, dan selalu menyemangati kami.
+
+
+Semoga Kakak selalu sehat, sukses di jenjang berikutnya, dan semua cita-cita yang Kakak impikan bisa tercapai. Semoga semua kebaikan Kakak dibalas dengan hal-hal yang lebih baik.
+
+
+Sekali lagi, terima kasih banyak atas semua bimbingannya. Semangat terus ya, Kak!
+
+
+Salam hangat,
+
+
+Denta Candra 🌷 `;
+
+let i = 0;
+
+function typing(){
+    if(i < text.length){
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing,40);
+    }else{
+        document.querySelector(".cursor").style.display="none";
+    }
+}
+
+typing();
+</script>
+
+</body>
+</html>
